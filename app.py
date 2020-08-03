@@ -57,6 +57,10 @@ def delete_review(review_id):
     mongo.db.reviews.remove({'_id': ObjectId(review_id)})
     return redirect(url_for('get_reviews'))
 
+@app.route('/login')
+def login():
+    return render_template('login.html')    
+
 
 if __name__ == '__main__':
     app.run(host=os.environ.get("IP"),
