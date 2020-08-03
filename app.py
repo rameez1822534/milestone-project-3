@@ -26,6 +26,10 @@ def insert_reviews():
     reviews.insert_one(request.form.to_dict())
     return redirect(url_for('get_reviews'))    
 
+@app.route('/review_display/<review_id>')
+def review_display(review_id):
+    reviews = mongo.db.reviews.find_one({'_id': ObjectId(review_id)})    
+    return render_template('review_display.html', reviews=reviews)
 
 if __name__ == '__main__':
     app.run(host=os.environ.get("IP"),

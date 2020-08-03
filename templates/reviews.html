@@ -21,7 +21,11 @@
   <!-- Review INTRO -->
   <h5 class="center">{{review.device_type}}</h5>
   <h6 class="center"><i class="fas fa-sim-card"></i>{{review.device_make}}</h6>
-  <h6 class="center"><i class="fas fa-mobile"></i> {{ review.device_model}}</h6>
+  <h6 class="center"><i class="fas fa-mobile"></i> {{review.device_model}}</h6>
+  <!--Full Recipe View Button -->
+  <a href="{{url_for('review_display', review_id=review._id)}}" class="btn waves-effect waves-light orange">View Full Review</a>
+</div>
+</div>
 {% endfor %}
 </div>    
 </div>
