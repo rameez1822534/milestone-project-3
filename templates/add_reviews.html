@@ -7,7 +7,7 @@
             <div class="row">
                 <div class="input-field col s12"  class="collapsible" data-collapsible="accordion">
                     <i class="material-icons prefix">poll</i>
-                    <select id="category" name="category_name">
+                    <select id="category_type" name="category_type">
                   <option value="" disabled selected>Choose Category</option>
                   {% for cat in categories %}
                       <option value="{{cat.category_type}}">{{cat.category_type}}</option>
