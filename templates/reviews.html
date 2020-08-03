@@ -1,17 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% block content %}
+<div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+        <br><br>
+        <h1 class="header center orange-text">Tech-Reviews</h1>
+        <div class="row center">
+            <h5 class="header col s12 light">You can trust our in-depth technology reviews to help you buy the best product for your needs</h5>
+        </div>
+            <div class="row center">
+            <a href="/add_recipe" class="btn-large waves-effect waves-light orange">Add Recipes</a>
+        </div>
+        <br><br>
+        <div class="row center">
+        <h2 class="center light-blue-text">Latest Recipes</h2>
     {% for review in reviews %}
-    {{review.deviceimage_url}}
-    {{review.device_type}}
-    {{review.device_make}}
-    {{review.device_model}}
-    {{review.device_ratings}}
+    <div class="col s12 m4">
+        <div class="icon-block">
+         <!-- Recipe Image -->
+         <img src="{{review.deviceimage_url}}" class="materialboxed" width="100%" height="165px" alt="{{review.device_model}}">
+  <!-- Recipe INTRO -->
+  <h5 class="center">{{review.device_type}}</h5>
+  <h6 class="center"><i class="fas fa-clock"></i>{{review.device_make}}</h6>
+  <h6 class="center"><i class="fas fa-utensils"></i> {{ review.device_model}}</h6>
 {% endfor %}
-</body>
-</html>
+</div>    
+</div>
+</div>
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% for review in reviews %}
+    {{review.deviceimage_url}}
+    {{review.device_type}}
+    {{review.device_make}}
+    {{review.device_model}}
+    {{review.device_ratings}}
+{% endfor %}
