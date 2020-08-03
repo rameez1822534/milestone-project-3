@@ -1,16 +1,29 @@
 .icon-block {
-  display: flex;
-  flex-direction: column;
-  padding: 15px;
-  height: 400px;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    height: 400px;
 }
 
 .review-block {
-  display: flex;
-  flex-direction: column;
-  padding: 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
 }
 
 .icon-block .material-icons {
-font-size: inherit;
+	font-size: inherit;
+}
+.fa, .fas {
+    color: orange;
+    padding: 5px;
+    font-weight: 900;
+}
+
+.waves-effect {
+    border: none;
+}
+
+.section.no-pad-bot {
+    min-height: 80vh;
 }
