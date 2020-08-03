@@ -42,6 +42,10 @@ Update a Recipe ([CRUD] Update recipes)</li>
   <h2>Features Left to Implement</h2>
 <li>Register User allowing anybody can register for free.
 </li>
+<li>Add full Specifications for the product 
+</li>
+<li>Add full prise range of the product 
+</li>
 <li>Log in and log out features
 </li>
 <li>Delete option that will only be visible for a user on their own review pages.</li>
