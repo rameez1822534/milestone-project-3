@@ -1,0 +1,24 @@
+{% block nav %} 
+<nav class="light-green lighten-1" role="navigation">
+    
+    <div class="nav-wrapper container">
+        
+        <a id="logo-container" href="/" class="brand-logo">Tech-Review</a>
+        
+        <ul class="right hide-on-med-and-down">
+            <li><a href="/login">login</a></li>
+        </ul>
+        <ul class="right hide-on-med-and-down">
+            <li><a href="/get_reviews">All Reviews</a></li>
+        </ul>
+         <ul class="right hide-on-med-and-down">
+            <li><a href="/addreviews">Add Reviews</a></li>
+        </ul>
+        <ul id="nav-mobile" class="sidenav">
+            <li><a href="/get_reviews">All Reviews</a></li>
+            <li><a href="/addreviews">Add Reviews</a></li>
+        </ul>
+        <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+</nav>
+{% endblock %}
