@@ -19,6 +19,12 @@ def get_reviews():
 def add_review():
     return render_template('addreviews.html',categories=mongo.db.categories.find())
 
+@app.route('/insert_reviews', methods=['POST'])
+def insert_reviews():
+    reviews = mongo.db.reviews
+    reviews.insert_one(request.form.to_dict())
+    return redirect(url_for('get_reviews'))    
+
 
 if __name__ == '__main__':
     app.run(host=os.environ.get("IP"),
