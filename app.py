@@ -21,5 +21,6 @@ def add_review():
 
 
 if __name__ == '__main__':
-    app.run(host=os.environ.get("IP", "0.0.0.0")
-            port=(os.environ.get("PORT", 5000)), debug=False)
+    app.run(host=os.environ.get("IP"),
+            port=(os.environ.get("PORT")), 
+            debug=True)
