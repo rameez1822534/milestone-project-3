@@ -15,6 +15,11 @@ def get_reviews():
     return render_template("reviews.html", reviews=mongo.db.reviews.find())
 
 
+@app.route('/add_review')
+def add_review():
+    return render_template('addreviews.html')
+
+
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=(os.environ.get('PORT')),
