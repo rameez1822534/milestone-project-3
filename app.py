@@ -15,8 +15,8 @@ def get_reviews():
     return render_template("reviews.html", reviews=mongo.db.reviews.find())
 
 
-@app.route('/add_review')
-def add_review():
+@app.route('/add_reviews')
+def add_reviews():
     return render_template('addreviews.html',categories=mongo.db.categories.find())
 
 @app.route('/insert_reviews', methods=['POST'])
