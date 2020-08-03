@@ -6,7 +6,7 @@ from bson.objectid import ObjectId
 app = Flask(__name__)
 
 app.config["MONGO_DBNAME"] = "tech-data"
-app.config["MONGO_URI"] =  os.environ.get("MONGO_URI")
+app.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb://localhost')
 
 mongo = PyMongo(app)
 
@@ -28,8 +28,15 @@ def insert_reviews():
 
 @app.route('/review_display/<review_id>')
 def review_display(review_id):
-    reviews = mongo.db.reviews.find_one({'_id': ObjectId(review_id)})    
-    return render_template('review_display.html', reviews=reviews)
+    review = mongo.db.reviews.find_one({'_id': ObjectId(review_id)})    
+    return render_template('review_display.html', reviews=review)
+
+@app.route('/edit_review/<review_id>')
+def edit_review(review_id):
+    review = mongo.db.reviews1.find_one({"_id": ObjectId(review_id)})
+    all_categories = mongo.db.categories.find()
+    print(edit_review)
+    return render_template('edit_review.html', reviews1=review, categories=all_categories)
 
 if __name__ == '__main__':
     app.run(host=os.environ.get("IP"),

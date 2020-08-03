@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="section no-pad-bot" id="index-banner">
+        <div class="container">
+            <br><br>
+            <h1 class="header center orange-text">Edit Review</h1>
+<!--Materialise form to imput recipes-->
+            <div class="row">
+            <form action="{{ url_for('edit_review', review_id=reviews._id) }}" method="POST" class="col s12">
+                <div class="row">
+                    <div class="input-field center col s12">
+                    <input value="{{ review.device_make }}" placeholder="" name="device_make" id="device_make" type="text" class="validate">
+                    <label for="device_make">Device Make</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field center col s12">
+                    <input value="{{ review.deviceimage_url}}" placeholder="" id="deviceimage_url" name="deviceimage_url" type="image" class="validate">
+                    <label for="deviceimage_url">Add Image</label>
+                    </div>
+                </div> 
+                <div class="row">
+                    <div class="input-field center col s12">
+                    <input value="{{ review.device_type}}" placeholder="" id="device_type" name="device_type" type="text" class="validate">
+                    <label for="device_type">Device Type</label>
+                    </div>
+                </div> 
+                <div class="row">
+                    <div class="input-field center col s12">
+                    <input value="{{ review.device_model }}" placeholder="" id="device_model" name="device_model" type="text" class="validate">
+                    <label for="device_model">Servings</label>
+                    </div>
+                </div>  
+                <div class="row">
+                    <div class="input-field col s12">
+                    <input value="{{ review.device_review }}" placeholder="" id="device_review" name="device_review" type="text" class="validate">
+                    <label for="device_review">Recipe Instructions</label>
+                    </div>
+                </div>
+                <div class="row center">
+                     <button class="btn-large waves-effect waves-light orange" type="submit" name="action">Save Review Edit
+                         <i class="material-icons right">playlist_add</i>
+                    </button>
+                    
+                </div>
+            </form>
+            </div>    
+        </div>
+    </div>
+    
+{% endblock %}
