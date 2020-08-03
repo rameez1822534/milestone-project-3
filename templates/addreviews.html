@@ -1,6 +1,58 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1>Add Review</h1>
-
+<div class="row">
+    <form action="" method="POST"  class="col s12">
+        <div class="row">
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">poll</i>
+                    <select id="category" name="category_name">
+                  <option value="" disabled selected>Choose Category</option>
+                </select>
+                    <label>Review by Category</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">today</i>
+                    <input id="deviceimage_url" name="deviceimage_url" type="text" >
+                    <label for="icon_prefix">Device image url</label>
+                </div>
+            </div>
+            <div class="input-field col s12">
+                <i class="material-icons prefix">assignment</i>
+                <input id="device_type" name="device_type" type="text">
+                <label for="icon_prefix">Task Name</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">subject</i>
+                <input name="device_make" id="device_make" type="text"> 
+                <label for="icon_telephone">Task Description</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">today</i>
+                <input id="device_model" name="device_model" type="text" >
+                <label for="icon_prefix">device model</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">today</i>
+                <textarea  id="device_review" name="device_review" class="materialize-textarea"></textarea>
+                <label for="icon_prefix">device review</label>
+            </div>
+        </div>
+        <div class="row">
+            <button class="btn waves-effect waves-light" type="submit" name="action">Add review
+                <i class="material-icons ">playlist_add</i>
+             </button>
+        </div>
+    </form>
+</div>
+</div>
 {% endblock %}
