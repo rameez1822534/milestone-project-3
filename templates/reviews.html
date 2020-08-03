@@ -8,7 +8,7 @@
             <h5 class="header col s12 light">You can trust our in-depth technology reviews to help you buy the best product for your needs</h5>
         </div>
             <div class="row center">
-            <a href="/addreviews" class="btn-large waves-effect waves-light orange">Add Reviews</a>
+            <a href="/add_reviews" class="btn-large waves-effect waves-light orange">Add Reviews</a>
         </div>
         <br><br>
         <div class="row center">
@@ -16,9 +16,9 @@
     {% for review in reviews %}
     <div class="col s12 m4">
         <div class="icon-block">
-         <!-- Recipe Image -->
+         <!-- Review Image -->
          <img src="{{review.deviceimage_url}}" class="materialboxed" width="100%" height="165px" alt="{{review.device_model}}">
-  <!-- Recipe INTRO -->
+  <!-- Review INTRO -->
   <h5 class="center">{{review.device_type}}</h5>
   <h6 class="center"><i class="fas fa-sim-card"></i>{{review.device_make}}</h6>
   <h6 class="center"><i class="fas fa-mobile"></i> {{ review.device_model}}</h6>

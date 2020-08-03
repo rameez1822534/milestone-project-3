@@ -4,10 +4,11 @@ from flask_pymongo import PyMongo
 from bson.objectid import ObjectId 
 
 app = Flask(__name__)
-app.config["MONGO_DBNAME"] = "tech-data"
-app.config["MONGO_URI"] = os.getenv("MONGO_URI")
-mongo = PyMongo(app)
 
+app.config["MONGO_DBNAME"] = "tech-data"
+app.config["MONGO_URI"] =  os.environ.get("MONGO_URI")
+
+mongo = PyMongo(app)
 
 @app.route('/')
 @app.route('/get_reviews')
