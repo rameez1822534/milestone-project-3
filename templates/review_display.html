@@ -20,7 +20,9 @@
                 <div class="col s12">
                         <!--Edit Recipe Button -->
                         <a href="{{url_for('edit_review', review_id=reviews._id)}}" class="btn waves-effect waves-light orange">Edit Review</a>
-                        
+                        <a href="{{url_for('delete_review', review_id=reviews._id)}}" class="btn waves-effect waves-light red">Delete Review</a>
                 </div>
             </div>   
+        </div>
+    </div>
             {% endblock %}
