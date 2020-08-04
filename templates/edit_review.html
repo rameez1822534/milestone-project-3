@@ -4,7 +4,9 @@
         <div class="container">
             <br><br>
             <h1 class="header center orange-text">Edit Review</h1>
-<!--Materialise form to imput recipes-->
+
+            <!--Materialise form to imput recipes-->
+            
             <div class="row">
             <form action="{{ url_for('update_review', review_id=reviews._id) }}" method="POST" class="col s12">
                 <div class="row">
@@ -15,7 +17,7 @@
                 </div>
                 <div class="row">
                     <div class="input-field center col s12">
-                    <input value="{{ reviews.deviceimage_url}}" placeholder="" id="deviceimage_url" name="deviceimage_url" type="image" class="validate">
+                    <input value="{{ reviews.deviceimage_url}}" placeholder="" id="deviceimage_url" name="deviceimage_url" type="text" class="validate">
                     <label for="deviceimage_url">Add Image</label>
                     </div>
                 </div> 

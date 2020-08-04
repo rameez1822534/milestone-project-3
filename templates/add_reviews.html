@@ -2,58 +2,57 @@
 {% block content %}
 
 <div class="row">
-    <form action="{{url_for('insert_reviews')}}" method="POST"  class="col s12">
+    <form action="{{ url_for('insert_reviews') }}" method="POST"  class="col s12">
         <div class="row">
             <div class="row">
-                <div class="input-field col s12"  class="collapsible" data-collapsible="accordion">
+                <div class="input-field col s12">
                     <i class="material-icons prefix">poll</i>
-                    <select id="category_type" name="category_type">
+                    <select id="category_name" name="category_name">
                   <option value="" disabled selected>Choose Category</option>
                   {% for cat in categories %}
-                      <option value="{{cat.category_type}}">{{cat.category_type}}</option>
+                      <option value="{{cat.category_name}}">{{cat.category_name}}</option>
                   {% endfor %}
                 </select>
-                    <label>Review Category</label>
+                    <label>Reviews Category</label>
                 </div>
-            </div>>
             </div>
-            <div class="row">
                 <div class="input-field col s12">
-                    <i class="material-icons prefix">today</i>
+                    <i class="material-icons prefix">add_a_photo</i>
                     <input id="deviceimage_url" name="deviceimage_url" type="text" >
                     <label for="icon_prefix">Device image url</label>
                 </div>
             </div>
+            <div class="row">
             <div class="input-field col s12">
-                <i class="material-icons prefix">assignment</i>
+                <i class="material-icons prefix">devices_other</i>
                 <input id="device_type" name="device_type" type="text">
                 <label for="icon_prefix">Device Type</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
-                <i class="material-icons prefix">subject</i>
+                <i class="material-icons prefix">build</i>
                 <input name="device_make" id="device_make" type="text"> 
-                <label for="icon_telephone">Device Make</label>
+                <label for="icon_prefix">Device Make</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
-                <i class="material-icons prefix">today</i>
+                <i class="material-icons prefix">tablet_mac</i>
                 <input id="device_model" name="device_model" type="text" >
                 <label for="icon_prefix">Device model</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
-                <i class="material-icons prefix">today</i>
+                <i class="material-icons prefix">create</i>
                 <textarea  id="device_review" name="device_review" class="materialize-textarea"></textarea>
                 <label for="icon_prefix">Device Review In Detail</label>
             </div>
         </div>
-        <div class="row">
+        <div class="row center">
             <button class="btn waves-effect waves-light" type="submit" name="action">Add review
-                <i class="material-icons ">playlist_add</i>
+                <i class="material-icons ">publish</i>
              </button>
         </div>
     </form>

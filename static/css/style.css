@@ -27,3 +27,13 @@
 .section.no-pad-bot {
     min-height: 80vh;
 }
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+      
