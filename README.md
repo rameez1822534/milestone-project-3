@@ -152,7 +152,7 @@ View | Add | Edit | Delete | Search
 <li>For testing the responsive aspect of the website I used a Google Chrome Developer Tools</li>
 <li>Side nav - the mobile side nav was not functioning correctly. This was rectifies by using URL_for as the source</li>
 <h3>Known Issues</h3>
-<li>Select category option in add reviews form is not responding</li>
+<li>Login form is not functional</li>
 
 <h2>Validators
 </h2>
