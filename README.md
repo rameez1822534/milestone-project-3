@@ -1,8 +1,8 @@
 <h1>Tech-Review</h1>
 <h2>Project Summary</h2>
-<p>tech-review  The purpose is to build a full-stack site that allows users to write and give their opinion about a particular domain that allows users to create, locate, read, update and delete the reviews about all the latest tech aroud. tech-review gives access to all the reviews in the database to the users. All users can add new reviews as well as edit, locate, and delete other reviews</p>
+<p>The purpose is to build a full-stack site that allows users to write and give their opinion about a particular domain and at the same time allow users to create, locate, read, update and delete the reviews about all the latest tech aroud. tech-review gives access to all the reviews in the database to the users. All users can add new reviews as well as edit, locate, and delete other reviews</p>
 
-The project can be viewed here<a href="https://tech-review05.herokuapp.com/">here</a>
+The project can be viewed <a href="https://tech-review05.herokuapp.com/">here</a>
 
 <h2>Wireframes</h2>
 <p>Wireframes.cc tool has been used to creat the wireframes
@@ -32,7 +32,7 @@ The purpose was to creat a modern and user-friendly interface with easy access t
 
 <li>
 Add a Review ([CRUD] Create or 'add' a new review)</li>
-<li>All users can add reviews.User name will automatically populate in the add review form as Review Author.For selective fields,user can select the options from drop down.All the fields of the form is well explained with the 'placeholder' to make it user friendly.
+<li>All users can add reviews , user can automatically populate the reviews database and all new reviews added by the user will be visible on the home page.All the fields of the form is well explained with the 'placeholder' to make it user friendly.
 Viewing Reviews ([CRUD] Read or write )</li>
 <li>On the reviews page, all reviews are displayed. If user wants to see a check review,the review will open in a full screen where all the details of the review can be found.
 Update a Review([CRUD] Update reviews)</li>
